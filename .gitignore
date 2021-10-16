@@ -1,8 +1,9 @@
-# 忽略文件
 config.cfg
 prac_cfg_default_post.cfg
 prac_cfg_default_pre.cfg
 trustedlaunch.cfg
 vm_backup.cfg
-videodefaults.txt
 vmodel_shareconf.cfg
+*.txt
+!启动项.txt
+!video.txt

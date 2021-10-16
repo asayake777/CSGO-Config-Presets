@@ -1,17 +1,41 @@
-# 个人用csgo cfg
+# 个人用csgocfg
 
 ## 一.指令修改
 
 ### 1.auto.cfg
 
+- 增加参数
+
 ```cfg
-增加参数
-cl_crosshair_sniper_width 2    //自定义AWP/SSG08准星粗细，默认是1像素
+cl_crosshair_sniper_width 2          //自定义AWP/SSG08准星粗细，默认是1像素
 
-bind ] say ╭∩╮( ° ͜ʖ͡°)╭∩╮       //说话指令
+alias mute   "toggle volume 0.03 1"; //定义F3切换静音
+bind  F3     "mute"
+
+bind "\" "rebuy"                     //按\重买
+bind "MOUSE3" "radio;slot12"         //中键 发送指令；医疗针
+
+bind ] say ╭∩╮( ° ͜ʖ͡°)╭∩╮             //说话指令
 bind [ say (╭☞ ͡° ͜ʖ ͡° )╭☞
-```
 
+//急停代码(斟酌使用)
+alias +you"+moveright;-moveleft";    //左右急停     
+alias -you"-moveright";
+bind d "+you";
+alias +zuo"+moveleft;-moveright";
+alias -zuo"-moveleft";
+bind a "+zuo";
+//alias +qian"+forward;-back";       //前后急停                
+//alias -qian"-forward";
+//bind w "+qian";
+//alias +hou"+back;-forward";
+//alias -hou"-back";
+//bind s "+hou";
+//bind "a" "+moveleft"               //恢复默认
+//bind "d" "+moveright"
+//bind "w" "+forward"
+//bind "s" "+back"
+```
 
 ### 2.practise.cfg
 
@@ -22,10 +46,15 @@ bind [ say (╭☞ ͡° ͜ʖ ͡° )╭☞
 ```cfg
 sv_noclipspeed 3                          //飞行穿墙速度(速度范围：1/8，默认/5)
 sv_noclipaccelerate 3                     //飞行穿墙时的移动加速度(加速度范围：1/5，默认/5)
+
 sv_showlagcompensation 0                  //是否显示 Hitbox 模型
 sv_showbullethits 0                       //是否显示子弹打中身体的位置
 cl_weapon_debug_show_accuracy 1           //开启子弹射击后留下弹道轨迹线
-cl_weapon_debug_show_accuracy_duration 10 //子弹射击后留下弹道轨迹线保留时bind xx toggle r_drawclipbrushes 0 1 2 3  //取消显示空气墙;同时显示阻挡人物的空气墙和投掷物空气墙(红绿);只显示阻挡人物的空气墙(红色);只显示阻挡投掷物的空气墙(绿色);
+cl_weapon_debug_show_accuracy_duration 10 //子弹射击后留下弹道轨迹线保留时
+sv_showimpacts "1"                        //着弹点显示；(红蓝)/1，红点本地着弹点/2，蓝点服务器弹着点/3,关闭/0
+sv_showimpacts_time "15"                  //弹着点时间（单位:s）
+
+bind xx toggle r_drawclipbrushes 0 1 2 3  //取消显示空气墙;同时显示阻挡人物的空气墙和投掷物空气墙(红绿);只显示阻挡人物的空气墙(红色);只显示阻挡投掷物的空气墙(绿色);
 vcollide_wireframe 1                      //显示物体模型线框
 cl_sim_grenade_trajectory 20              //冻结当前预览的抛物线，可自定义时间(单位:s),未绑定按键
 ```
@@ -44,11 +73,19 @@ bind kp_uparrow    map de_vertigo;    //8
 bind kp_pgup                          //9
 ```
 
-## 二.增加文件
+## 二.增减文件
 
-- zx.cfg
-准星相关文件
-- play.cfg
-自娱自乐模拟器
-- export.cfg
-导出准星和持枪参数
+- 增加
+
+```cfg
+zx.cfg        //各种准星
+play.cfg      //自娱自乐模拟器
+export1.cfg   //导出准星参数
+export2.cfg   //导出持枪参数
+```
+
+- 删除
+
+```cfg
+原作者支付宝
+```
