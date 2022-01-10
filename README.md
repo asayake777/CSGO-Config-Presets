@@ -9,16 +9,22 @@
 ```cfg
 cl_crosshair_sniper_width 2          //自定义AWP/SSG08准星粗细，默认是1像素
 
+cl_crosshaircolor                    //0红色，1绿色，2黄色，3紫色，4淡蓝色
+
 alias mute   "toggle volume 0.03 1"; //定义F3切换静音
 bind  F3     "mute"
 
 bind "\" "rebuy"                     //按\重买
 bind "MOUSE3" "radio;slot12"         //中键 发送指令；医疗针
 
-bind ] say ╭∩╮( ° ͜ʖ͡°)╭∩╮             //说话指令
+bind ] say ╭∩╮( ° ͜ʖ͡°)╭∩╮             //聊天框表情
 bind [ say (╭☞ ͡° ͜ʖ ͡° )╭☞
 
-//急停代码(斟酌使用)
+bind c "use weapon_knife;use weapon_decoy;use weapon_flashbang";   //快速切闪&诱饵弹
+
+cl_showfps                    0    //FPS信息                   <0.否 1.是>
+
+//急停代码(谨慎使用)
 alias +you"+moveright;-moveleft";    //左右急停     
 alias -you"-moveright";
 bind d "+you";
@@ -35,6 +41,12 @@ bind a "+zuo";
 //bind "d" "+moveright"
 //bind "w" "+forward"
 //bind "s" "+back"
+```
+
+- 修改参数
+
+```cfg
+bind c "use weapon_knife;use weapon_decoy;use weapon_flashbang";   //闪&诱饵弹
 ```
 
 ### 2.practise.cfg
@@ -57,6 +69,7 @@ sv_showimpacts_time "15"                  //弹着点时间（单位:s）
 bind xx toggle r_drawclipbrushes 0 1 2 3  //取消显示空气墙;同时显示阻挡人物的空气墙和投掷物空气墙(红绿);只显示阻挡人物的空气墙(红色);只显示阻挡投掷物的空气墙(绿色);
 vcollide_wireframe 1                      //显示物体模型线框
 cl_sim_grenade_trajectory 20              //冻结当前预览的抛物线，可自定义时间(单位:s),未绑定按键
+bind  mouse3   "toggle fov_cs_debug 40 0" //中键放大
 ```
 
 - 小键盘更改地图
