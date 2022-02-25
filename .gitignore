@@ -7,3 +7,5 @@ vmodel_shareconf.cfg
 *.txt
 !启动项.txt
 !video.txt
+5e_economy.cfg
+gamestate_integration_5e.cfg
