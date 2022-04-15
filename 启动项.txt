@@ -3,7 +3,7 @@
 
 推荐启动项
 
--high -novid -nojoy -refresh 240 -tickrate 128 +cl_cmdrate 128 +cl_updaterate 128 +exec auto.cfg
+-high -novid -nojoy -tickrate 128 +cl_cmdrate 128 +cl_updaterate 128 +exec auto.cfg
 
 
 常用启动项说明：
